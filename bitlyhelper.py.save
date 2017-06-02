@@ -1,0 +1,17 @@
+bc434ad428a1b6c1b5436d846febb0d1bb9e753dimport urllib2
+import json
+
+TOKEN = "6f399dedf5e29837265bd3538da2f84f9279d6f5"
+ROOT_URL = "http://95.85.42.47"
+SHORTEN = "/v3/shorten?access_token={}&longUrl={}"
+
+class BitlyHelper:
+
+    def shorten_url(self, longurl):
+        try:
+            url = ROOT_URL + SHORTEN.format(TOKEN, longurl)
+            response = urllib2.urlopen(url).read()
+            jr = json.loads(response)
+            return jr['data']['url']
+        except Exception as e:
+            print e
