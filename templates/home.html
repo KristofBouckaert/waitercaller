@@ -29,13 +29,13 @@
 	  {% endif %}
 	  {{ loginform.csrf_token}}
 	  <div class="form-group">
-	    {{ loginform.loginemail(class="form-control", placeholder="Email Address")}}
+	    {{ loginform.loginemail(class="form-control", placeholder="E-mail adres")}}
 	  </div>
 	  <div class="form-group">
- 	    {{ loginform.loginpassword(class="form-control", placeholder="Password")}}
+ 	    {{ loginform.loginpassword(class="form-control", placeholder="Paswoord")}}
 	  </div>
 	  <div class="form-group">
-	    {{ loginform.submit(value="Sign in", class="btn btn-success")}}
+	    {{ loginform.submit(value="Log in", class="btn btn-success")}}
 	  </div>
 	</form>
         </div><!--/.navbar-collapse -->
@@ -47,23 +47,23 @@
 {% block content %}
     <div class="jumbotron">
       <div class="container">
-        <h1>Waiter Caller</h1>
-        <p>Your patrons can call their waiter anytime, using only their phone</p>
+        <h1>Bediening gewenst.</h1>
+        <p>Uw klanten kunnen op elk moment bediening vragen vanop hun locatie enkel en alleen door gebruik van hun smartphone.</p>
       </div>
     </div>
 
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <h2>Simple</h2>
-          <p>Just print out the URLs and put them on the tables of your restaurant. No specialized hardware required. </p>
+          <h2>Eenvoudig</h2>
+          <p>Print gewoon de URL's uit en plaats ze op de bijhorende locaties.</p>
         </div>
         <div class="col-md-4">
-          <h2>Cost effective</h2>
-          <p>No need to buy hardware either for your tables or for your kitchen. Management and usage all directly from this page.</p>
+          <h2>Kosten efficiënt</h2>
+          <p>Geen nood aan specifieke tools. Beheer en gebruik gebeurt allemaal rechtstreeks van deze pagina's.</p>
        </div>
         <div class="col-md-4">
-          <h2>Register now</h2>
+          <h2>Registreer nu</h2>
              <form class="form-horizontal" action="/register" method="POST">
               {{ registrationform.csrf_token }}  
 		<div class="form-group">
@@ -71,7 +71,7 @@
 			{% if registrationform.email.errors %}
 			  <ul class="errors">{% for error in registrationform.email.errors %}<li>{{ error }}</li>{% endfor %}</ul>
 			{% endif %}
-                        {{ registrationform.email(class="form-control", placeholder="Email Address") }}
+                        {{ registrationform.email(class="form-control", placeholder="E-mail adres") }}
                     </div>
                 </div>
                 <div class="form-group">
@@ -79,7 +79,7 @@
  			{% if registrationform.password.errors %}
 			  <ul class="errors">{% for error in registrationform.password.errors %}<li>{{ error }}</li>{% endfor %}</ul>
 			{% endif %}
-			{{ registrationform.password(class="form-control", placeholder="Password") }}
+			{{ registrationform.password(class="form-control", placeholder="Paswoord") }}
                     </div>
                 </div>
                 <div class="form-group">
@@ -87,12 +87,12 @@
 			{% if registrationform.password2.errors %}
 			  <ul class="errors">{% for error in registrationform.password2.errors %}<li>{{ error }}</li>{% endfor %}</ul>
 			{% endif %}
-                        {{ registrationform.password2(class="form-control", placeholder="Confirm Password") }}
+                        {{ registrationform.password2(class="form-control", placeholder="Bevestig Paswoord") }}
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-9">
-                        {{ registrationform.submit(class="btn btn-primary btn-block") }}
+                        {{ registrationform.submit(value="Registreer", class="btn btn-primary btn-block") }}
                     </div>
                 </div>
             </form> <!-- /form -->

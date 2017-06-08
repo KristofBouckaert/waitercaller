@@ -8,20 +8,20 @@
     <div class="jumbotron">
       <div class="container">
         <h1>Dashboard</h1>
-        <p>View all patron requests below</p>
+        <p>Bekijk hieronder alle vragen naar bediening</p>
       </div>
     </div>
 
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>Requests</h2>
+          <h2>Vragen naar bediening</h2>
 	  {% if requests %}
 	    <table class="table table-striped">
 		<tr>
-		  <th>No.</th>
-		  <th>Wait</th>
-		  <th>Resolve</th>
+		  <th>Nummer of Naam</th>
+		  <th>Wachttijd</th>
+		  <th>Behandelt</th>
 		</tr>
 		{% for request in requests %}
 		  <tr>
@@ -29,13 +29,13 @@
 			<td>{{request.table_number}}</td>
 			<td>{{request.wait_minutes}}</td>
 			<input type="text" name="request_id" value="{{request._id}}" hidden>
-			<td><input type="submit" value="Resolve" class="btn btn-primary"></td>
+			<td><input type="submit" value="Behandelt" class="btn btn-primary"></td>
 		    </form>
 		  </tr>
 		{% endfor %}
 	    </table>
 	  {% else %}
-            <p>All your customers are currently satisfied - no requests</p>
+            <p>Alle klanten zijn momenteel bedient - geen openstaande vragen.</p>
   	  {% endif %}
         </div>    
       </div>
