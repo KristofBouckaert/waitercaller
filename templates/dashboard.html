@@ -8,14 +8,14 @@
     <div class="jumbotron">
       <div class="container">
         <h1>Dashboard</h1>
-        <p>Bekijk hieronder alle vragen naar bediening</p>
+        <p>Bekijk hieronder alle openstaande vragen naar hulp</p>
       </div>
     </div>
 
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>Vragen naar bediening</h2>
+          <h2>Vragen naar hulp</h2>
 	  {% if requests %}
 	    <table class="table table-striped">
 		<tr>
@@ -35,7 +35,7 @@
 		{% endfor %}
 	    </table>
 	  {% else %}
-            <p>Alle klanten zijn momenteel bedient - geen openstaande vragen.</p>
+            <p>Alle klanten zijn momenteel geholpen - geen openstaande vragen.</p>
   	  {% endif %}
         </div>    
       </div>
