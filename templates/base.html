@@ -26,7 +26,7 @@
 
   </head>
   {% block bodytag %}
-  <body style="font-size: 200%;">
+  <body>
   {% endblock %}
     {% block navbar %}
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -40,6 +40,11 @@
     {% endblock %}
 
     {% block content %}
+	<style type="text/css">
+		body{
+			font-size : 200%;
+		}
+	</style>
     {% endblock %}
 
     <div class="container">
