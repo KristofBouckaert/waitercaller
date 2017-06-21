@@ -115,8 +115,8 @@ def register():
 @app.route("/newrequest/<tid>")
 def new_request(tid):
     if DB.add_request(tid, datetime.datetime.now()):
-	return "Your request has been logged and a waiter will be with you shortly"
-    return "There is already a request pending for this table. Please be patient, a waiter will be there ASAP"
+	return "Uw aanvraag is geregistreerd en een medewerker zal u zo snel mogelijk helpen."
+    return "Er is al een aanvraag geregistreerd voor deze locatie. Gelieve even geduld te hebben aub, een medewerker zal u zo snel mogelijk helpen."
 
 
 if __name__ == '__main__':
