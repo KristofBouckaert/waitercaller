@@ -120,4 +120,5 @@ def new_request(tid):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    context = ('server.crt', 'server.key')
+    app.run(debug=True, ssl_context=context)
